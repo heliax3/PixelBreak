@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Break Arcade</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="site-shell">
+    <header class="hero">
+      <a class="brand" href="#home" aria-label="Pixel Break Arcade home"><span>PIXEL</span> BREAK</a>
+      <p class="tagline">Classic games. Zero sign-up. Maximum procrastination.</p>
+    </header>
+
+    <section id="home" class="home-screen screen active" aria-labelledby="choose-game">
+      <div class="intro">
+        <p class="eyebrow">Pick your study break</p>
+        <h1 id="choose-game">Press start on<br><em>something fun.</em></h1>
+        <div class="arcade-wallet"><span>⭐ <b id="wallet-points">0</b> points</span><button id="shop-button">Open Prize Shop</button></div>
+      </div>
+      <div class="game-grid">
+        <button class="game-card tetris-card" data-game="tetris">
+          <span class="card-art tetris-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="card-copy"><strong>Tetris</strong><small>Stack it. Clear it.</small></span>
+          <span class="play-chip">PLAY →</span>
+        </button>
+        <button class="game-card pong-card" data-game="pong">
+          <span class="card-art pong-art" aria-hidden="true"><i></i><i></i><b></b></span>
+          <span class="card-copy"><strong>Pong</strong><small>First to 7 wins.</small></span>
+          <span class="play-chip">PLAY →</span>
+        </button>
+        <button class="game-card snake-card" data-game="snake">
+          <span class="card-art snake-art" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></span>
+          <span class="card-copy"><strong>Snake</strong><small>Eat. Grow. Survive.</small></span>
+          <span class="play-chip">PLAY →</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="shop" class="shop-panel" aria-labelledby="shop-title">
+      <div class="shop-heading"><div><p class="eyebrow">ARCADE REWARDS</p><h2 id="shop-title">Prize Shop</h2></div><button id="close-shop" class="close-shop" aria-label="Close shop">×</button></div>
+      <p class="shop-balance">Your balance: <strong id="shop-points">0</strong> ⭐</p>
+      <p id="shop-refresh" class="shop-refresh">New powerups in 30:00</p>
+      <div id="shop-items" class="shop-items"></div>
+      <p class="shop-note">Points and prizes are saved on this device.</p>
+    </section>
+
+    <section id="game" class="game-screen screen" aria-live="polite">
+      <div class="game-topbar">
+        <button id="back-button" class="back-button">← All games</button>
+        <div><span id="game-kicker" class="eyebrow">ARCADE MODE</span><h2 id="game-title">Tetris</h2></div>
+        <button id="restart-button" class="restart-button">↻ Restart</button>
+      </div>
+      <div class="play-area">
+        <div class="board-wrap"><canvas id="game-canvas" width="400" height="400"></canvas><div id="overlay" class="overlay hidden"></div></div>
+        <aside class="score-panel">
+          <div><span>Score</span><strong id="score">0</strong></div>
+          <div><span>High score</span><strong id="high-score">0</strong></div>
+          <div class="instructions"><span>How to play</span><p id="instructions"></p></div>
+        </aside>
+      </div>
+      <div class="mobile-controls" id="mobile-controls">
+        <button data-control="left">←</button><button data-control="up">↑</button><button data-control="right">→</button><button data-control="down">↓</button>
+      </div>
+    </section>
+  </main>
+  <footer>Made for quick breaks between big ideas.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
