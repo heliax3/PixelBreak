@@ -17,7 +17,7 @@
       <div class="intro">
         <p class="eyebrow">Pick your study break</p>
         <h1 id="choose-game">Press start on<br><em>something fun.</em></h1>
-        <div class="arcade-wallet"><span>⭐ <b id="wallet-points">0</b> points</span><button id="shop-button">Open Prize Shop</button></div>
+        <div class="arcade-wallet"><span>⭐ <b id="wallet-points">0</b> points</span><button id="shop-button">Open Prize Shop</button><button id="profile-button">👤 My Profile</button></div>
       </div>
       <div class="game-grid">
         <button class="game-card tetris-card" data-game="tetris">
@@ -44,6 +44,15 @@
       <p id="shop-refresh" class="shop-refresh">New powerups in 30:00</p>
       <div id="shop-items" class="shop-items"></div>
       <p class="shop-note">Points and prizes are saved on this device.</p>
+    </section>
+
+    <section id="profile" class="shop-panel profile-panel" aria-labelledby="profile-title">
+      <div class="shop-heading"><div><p class="eyebrow">PLAYER PROFILE</p><h2 id="profile-title">My Arcade Card</h2></div><button id="close-profile" class="close-shop" aria-label="Close profile">×</button></div>
+      <p class="shop-balance">⭐ Total points: <strong id="profile-points">0</strong></p>
+      <h3 class="profile-section-title">Badges collected</h3>
+      <div id="profile-badges" class="badge-list"></div>
+      <h3 class="profile-section-title">Highest scores</h3>
+      <div id="profile-scores" class="profile-scores"></div>
     </section>
 
     <section id="game" class="game-screen screen" aria-live="polite">
