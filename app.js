@@ -28,6 +28,8 @@ document.querySelectorAll('.game-card').forEach(card => card.addEventListener('c
 document.querySelector('#shop-button').onclick=()=>{renderShop();document.querySelector('#shop').classList.add('open')};
 document.querySelector('#close-shop').onclick=()=>document.querySelector('#shop').classList.remove('open');
 setInterval(()=>{if(document.querySelector('#shop').classList.contains('open'))renderShop()},1000);
+// Hydrate the homepage wallet immediately on refresh, before any score changes.
+renderShop();
 document.querySelector('#back-button').onclick = () => { stop(); document.querySelector('#game').classList.remove('active'); document.querySelector('#home').classList.add('active'); };
 document.querySelector('#restart-button').onclick = () => {localStorage.removeItem(currentKey());start(game)};
 document.querySelector('#profile-button').onclick=()=>{renderProfile();document.querySelector('#profile').classList.add('open')};
